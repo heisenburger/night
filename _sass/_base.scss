@@ -2,10 +2,12 @@
 
 body {
   position: relative;
-  background-color: #000000;
+  background-color: #010101;
   color: #ffffff;
   margin: 0;
   font-family: $sansserif;
+  animation: flicker 7s infinite,
+              twitch 3s infinite;
 }
 
 .tvtext {
@@ -19,17 +21,61 @@ body {
   height: 100vh;
   background-image: linear-gradient(transparent 0.1rem, rgba(0,0,0,.25) 0.05rem);
   background-size: 1px 4px;
-  z-index: 2;
+  z-index: 1;
+  animation: scan 50s infinite;
 }
 
+// animations
+
 @keyframes scan {
-  0% {
-    background-position:0% 50%
-  }
-  50% {
-    background-position:100% 50%
-  }
-  100% {
-    background-position:0% 50%
-  }
+  0% { background-position:1px top }
+  100% { background-position:1px bottom }
+}
+
+@keyframes flicker {
+  0% { opacity: 1 }
+
+  9% { opacity: 1 }
+  10% { opacity: 0.9 }
+  11% { opacity: 1 }
+
+  19% { opacity: 1 }
+  20% { opacity: 0.7 }
+  21% { opacity: 1 }
+
+  36% { opacity: 1 }
+  37% { opacity: 0.9 }
+  38% { opacity: 1 }
+
+  49% { opacity: 1 }
+  50% { opacity: 0.7 }
+  51% { opacity: 1 }
+
+  67% { opacity: 1 }
+  68% { opacity: 0.8 }
+  69% { opacity: 1 }
+
+  97% { opacity: 1 }
+  98% { opacity: 0.9 }
+  99% { opacity: 1 }
+
+  100% { opacity: 1}
+}
+
+@keyframes twitch {
+  0% { transform: skew(0,0) }
+
+  4% { transform: skew(0,0) }
+  5% { transform: skew(0.01rad, 0) }
+  6% { transform: skew(0,0) }
+
+  17% { transform: skew(0,0) }
+  18% { transform: skew(-0.01rad,-0.001rad) }
+  19% { transform: skew(0,0) }
+
+  40% { transform: skew(0,0) }
+  42% { transform: skew(-0.002rad, 0.001rad) }
+  44% { transform: skew(0,0) }
+
+  100% { transform: skew(0,0)}
 }
