@@ -1,8 +1,20 @@
 // type
 
 .tvtext {
-  font-size: 25vh;
+  font-size: $text-size;
   text-align: center;
-  font-weight: 900;
+  font-weight: 700;
   text-transform: uppercase;
+}
+
+.r { 
+  color: red;
+}
+
+.g { 
+  color: green;
+}
+
+.b { 
+  color: blue;
 }

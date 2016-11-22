@@ -12,22 +12,8 @@ $serif: "Adobe Caslon Pro","Athelas",
   "Goudy Old Style","Californian FB", 
   Georgia, serif;
 
-$base-font-size:   16px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-
-$spacing-unit:     2rem;
-$spacer:           3.125rem;
-
-$text-color:       #2B2B2B;
-$background-color: #fdfdfd;
-$accent-color:     #a58e19;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$text-size: 20vh;
+$seperation: 3px;
 
 $bp-tablet:        768px;
 $bp-desktop:       1024px;
@@ -43,5 +29,6 @@ $bp-desktopwide:   1440px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
   "base",
-  "typography"
+  "typography",
+  "animations"
 ;

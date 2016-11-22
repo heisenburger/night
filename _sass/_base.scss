@@ -1,17 +1,53 @@
 // base
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   position: relative;
-  background-color: #010101;
-  color: #ffffff;
+  background-color: black;
+  color: white;
   margin: 0;
   font-family: $sansserif;
+}
+
+.screen {
+  margin-right: 5vw;
+  padding: 0 5vw;
+  width: 90vw;
+  height: 100vh;
+  border-radius: $text-size;
+  background-color: lighten(black, 10%);
+  filter: blur(1px);
+}
+
+.textwrap {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  position: relative;
   animation: flicker 7s infinite,
               twitch 3s infinite;
 }
 
 .tvtext {
-  padding-top: 10vh;
+  position: absolute;
+  display: inline-block;
+  padding-top: 20vh;
+  
+}
+
+.r { 
+  margin-left: -$seperation;
+}
+
+.g { 
+  margin-top: $seperation * 0.6;
+}
+
+.b { 
+  margin-right: -$seperation;
 }
 
 .crtlines {
@@ -19,63 +55,11 @@ body {
   top: 0; left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(transparent 0.1rem, rgba(0,0,0,.25) 0.05rem);
+  background-image: linear-gradient(
+    transparent 0.1rem, 
+    rgba(0,0,0,.2) 0.05rem);
   background-size: 1px 4px;
   z-index: 1;
-  animation: scan 50s infinite;
-}
-
-// animations
-
-@keyframes scan {
-  0% { background-position:1px top }
-  100% { background-position:1px bottom }
-}
-
-@keyframes flicker {
-  0% { opacity: 1 }
-
-  9% { opacity: 1 }
-  10% { opacity: 0.9 }
-  11% { opacity: 1 }
-
-  19% { opacity: 1 }
-  20% { opacity: 0.7 }
-  21% { opacity: 1 }
-
-  36% { opacity: 1 }
-  37% { opacity: 0.9 }
-  38% { opacity: 1 }
-
-  49% { opacity: 1 }
-  50% { opacity: 0.7 }
-  51% { opacity: 1 }
-
-  67% { opacity: 1 }
-  68% { opacity: 0.8 }
-  69% { opacity: 1 }
-
-  97% { opacity: 1 }
-  98% { opacity: 0.9 }
-  99% { opacity: 1 }
-
-  100% { opacity: 1}
-}
-
-@keyframes twitch {
-  0% { transform: skew(0,0) }
-
-  4% { transform: skew(0,0) }
-  5% { transform: skew(0.01rad, 0) }
-  6% { transform: skew(0,0) }
-
-  17% { transform: skew(0,0) }
-  18% { transform: skew(-0.01rad,-0.001rad) }
-  19% { transform: skew(0,0) }
-
-  40% { transform: skew(0,0) }
-  42% { transform: skew(-0.002rad, 0.001rad) }
-  44% { transform: skew(0,0) }
-
-  100% { transform: skew(0,0)}
+  animation: scan 50s infinite,
+              twitch 3s infinite;
 }
