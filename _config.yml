@@ -1,0 +1,17 @@
+title: words from the night
+email: serenadantingchen@gmail.com
+description: > 
+  An experiment in a moment of boredom
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "wordsfromthenight.serena.nz" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: sereeena
+github_username:  heisenburger
+
+# Build settings
+markdown: kramdown
+exclude:
+  - Gemfile
+  - Gemfile.lock
+sass:
+  sass_dir: _sass
+  style: compressed

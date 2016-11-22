@@ -1,0 +1,35 @@
+// base
+
+body {
+  position: relative;
+  background-color: #000000;
+  color: #ffffff;
+  margin: 0;
+  font-family: $sansserif;
+}
+
+.tvtext {
+  padding-top: 10vh;
+}
+
+.crtlines {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(transparent 0.1rem, rgba(0,0,0,.25) 0.05rem);
+  background-size: 1px 4px;
+  z-index: 2;
+}
+
+@keyframes scan {
+  0% {
+    background-position:0% 50%
+  }
+  50% {
+    background-position:100% 50%
+  }
+  100% {
+    background-position:0% 50%
+  }
+}
