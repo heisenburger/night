@@ -2,8 +2,9 @@ title: WRDS/FRM/TH/NGHT//SC
 email: serenadantingchen@gmail.com
 description: > 
   An experiment in a moment of boredom
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "lab.serena.nz/wordsfromthenight" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/night"
+url: https://heisenburger.github.io/night/
+#url: "lab.serena.nz/wordsfromthenight"
 twitter_username: sereeena
 github_username:  heisenburger
 
