@@ -44,6 +44,14 @@ var bank = [
   "sometimes quiet is violent",
   "my parents warned me about the drugs in the streets but never the ones with hazel eyes and a heartbeat",
   "II. Eyes I dare not meet in dreams / In death's dream kingdom // Sunlight on a broken column / There, is a tree swinging / And voices are / In the wind's singing",
+  "Once upon a time somewhere along the temporal continuum...",
+  "in the world through which i travel i am endlessly creating myself",
+  "Britney survived 2007. You can survive today.",
+  "Cool girl is hot. Cool git is game. Cool girl is fun.",
+  "Make art not friends",
+  "In a time of deceit telling the truth is a revolutionary act.",
+  "or perhaps we've forgotten that we are still pioneers",
+  "Did you come into contact with unknown magical forces",
   "",
 ];
 

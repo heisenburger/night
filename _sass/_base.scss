@@ -8,16 +8,10 @@ body {
   position: relative;
   background-color: black;
   color: white;
-  margin: 0;
-  font-family: $serif;
-  font-feature-settings: "kern" 1,"liga" 1,"calt" 1,"pnum" 1,"tnum" 0,"onum" 1,"lnum" 0,"dlig" 0;
-  font-kerning: normal;
-  text-rendering: optimizeLegibility;
 }
 
 .screen {
   margin: 0 5vw;
-  padding: 0 5vw;
   width: 90vw;
   height: 100vh;
   border-radius: $text-size;
