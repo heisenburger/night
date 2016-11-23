@@ -40,7 +40,7 @@
   // 0% { transform: skew(0,0) }
 
   4% { transform: skew(0,0) }
-  5% { transform: skew(0.005rad, 0.001rad) }
+  5% { transform: skew(0.009rad, 0.001rad) }
   6% { transform: skew(0,0) }
 
   17% { transform: skew(0,0) }
@@ -48,15 +48,15 @@
   19% { transform: skew(0,0) }
 
   25% { transform: translate(0,0), skew(0,0) }
-  26% { transform: translate(0,2px), skew(-0.005rad, 0.001rad) }
+  26% { transform: translate(2px,0), skew(0.01rad, 0) }
   27% { transform: translate(0,0), skew(0,0) }
 
   40% { transform: skew(0,0) }
-  42% { transform: skew(-0.002rad, 0.001rad) }
+  42% { transform: skew(-0.008rad, 0) }
   44% { transform: skew(0,0) }
 
   73% { transform: translate(0,0), scale(0,0) }
-  74% { transform: translate(0,1px), scale(0.8, 0.5) }
+  74% { transform: translate(0,2px), scale(0.8, 0.5) }
   75% { transform: translate(0,0), scale(0,0) }
 
   // 100% { transform: skew(0,0)}

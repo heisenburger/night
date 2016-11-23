@@ -2,9 +2,8 @@
 
 var bank = [
   "Advice I gave to other people was really about me",
-  "Let's exchange email addresses",
   "a/s/l?",
-  "Don't listen to the killers unless you fallin asleep while she's callin a cab and he's havin a smoke while she's takin a drag",
+  "Don't listen to the killers unless you fallin asleep while she's callin a cab",
   "In case of emergency: Good Luck",
   "I'm always tired but never of you",
   "There is nothing behind you",
@@ -26,16 +25,15 @@ var bank = [
   "earth sucks",
   "SUPPORT WOMEN OF COLOUR",
   "I walked. And then. I saw me walking in front of myself. But it wasn't really me.",
-  "I thought that my life would improve if I got a leather jacket. And I was 100% totally right.",
-  "PR_DA",
-  "Just let it go, Peter",
+  "I thought my life would improve if I got a leather jacket. And I was totally right.",
+  "PR__DA",
+  "Just let it go",
   "If you're horny, let's do it",
   "I'm exhausted",
   "o.k.",
   "THE TRUTH IS OUT THERE",
   "I WANT TO BELIEVE",
   "The night is still young",
-  "I DON'T FUCK WITH U",
   "The one in front of the gun lives forever",
   "REAL RECOGNISE REAL",
   "Nick Dunne took my pride and my dignity and my hope and my money",
@@ -43,5 +41,26 @@ var bank = [
   "Nice",
   "TRY AGAIN?",
   "all of their lies are true",
+  "sometimes quiet is violent",
+  "my parents warned me about the drugs in the streets but never the ones with hazel eyes and a heartbeat",
+  "II. Eyes I dare not meet in dreams / In death's dream kingdom // Sunlight on a broken column / There, is a tree swinging / And voices are / In the wind's singing",
   "",
-]
+];
+
+document.body.onload = getphrase(bank);
+
+function getphrase(bank) {
+  var phrase = bank[Math.floor(Math.random()*bank.length)];
+
+  var textwrap = document.getElementById("textwrap");
+
+  ["r", "g", "b", "w"].map(
+    function (color) {
+      var e = document.createElement("div");
+      e.className = "tvtext " + color;
+      e.innerHTML = phrase;
+      textwrap.appendChild(e);
+    }
+  );
+
+};

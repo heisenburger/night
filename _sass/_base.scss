@@ -9,7 +9,7 @@ body {
   background-color: black;
   color: white;
   margin: 0;
-  font-family: $sansserif;
+  font-family: $serif;
   font-feature-settings: "kern" 1,"liga" 1,"calt" 1,"pnum" 1,"tnum" 0,"onum" 1,"lnum" 0,"dlig" 0;
   font-kerning: normal;
   text-rendering: optimizeLegibility;
@@ -22,18 +22,25 @@ body {
   height: 100vh;
   border-radius: $text-size;
   filter: blur(1px);
+  overflow-y: hidden;
 }
 
 .textwrap {
-  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 100%;
   animation: flicker 7s infinite,
               twitch 3s infinite;
 }
 
 .tvtext {
   position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   display: inline-block;
-  padding-top: 20vh;
+  width: 100%;
+  // padding-top: $text-size;
   
 }
 
