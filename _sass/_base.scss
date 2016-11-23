@@ -10,22 +10,21 @@ body {
   color: white;
   margin: 0;
   font-family: $sansserif;
+  font-feature-settings: "kern" 1,"liga" 1,"calt" 1,"pnum" 1,"tnum" 0,"onum" 1,"lnum" 0,"dlig" 0;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
 }
 
 .screen {
-  margin-right: 5vw;
+  margin: 0 5vw;
   padding: 0 5vw;
   width: 90vw;
   height: 100vh;
   border-radius: $text-size;
-  background-color: lighten(black, 10%);
   filter: blur(1px);
 }
 
 .textwrap {
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
   position: relative;
   animation: flicker 7s infinite,
               twitch 3s infinite;
