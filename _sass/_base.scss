@@ -43,11 +43,11 @@ body {
 }
 
 .g { 
-  margin-top: $seperation * 0.6;
+  margin-top: $seperation;
 }
 
 .b { 
-  margin-right: -$seperation;
+  margin-left: $seperation;
 }
 
 .crtlines {
