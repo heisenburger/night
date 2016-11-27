@@ -7,7 +7,6 @@ var bank = [
   "In case of emergency: Good Luck",
   "I'm always tired but never of you",
   "There is nothing behind you",
-  "Your mouth is as wonderous as the oceans and seas",
   "Assume all communications are tapped",
   "black skin is not a crime",
   "warm comfort",
@@ -19,7 +18,7 @@ var bank = [
   "ugh",
   "Are you sure? Y/N",
   "open your mouth",
-  "It is now safe to turn off your computer",
+  "Is it now safe to turn off your computer",
   "For my next trick, I will be emotionally stable",
   "The last person I had to forgive was myself",
   "earth sucks",
@@ -47,22 +46,28 @@ var bank = [
   "Once upon a time somewhere along the temporal continuum...",
   "in the world through which i travel i am endlessly creating myself",
   "Britney survived 2007. You can survive today.",
-  "Cool girl is hot. Cool git is game. Cool girl is fun.",
+  "Cool girl is hot. Cool girl is game. Cool girl is fun.",
   "Make art not friends",
   "In a time of deceit telling the truth is a revolutionary act.",
   "or perhaps we've forgotten that we are still pioneers",
   "Did you come into contact with unknown magical forces",
+  "being nice is cool",
+  "The lesson repeats, as needed.",
+  "God exi ts",
+  "Sleep with your limbs dangling off the edge of your bed to let the monsters know you're willing",
   "",
 ];
 
-document.body.onload = getphrase(bank);
+document.body.onload = setFont();
+document.body.onload = getPhrase(bank);
 
-function getphrase(bank) {
+
+function getPhrase(bank) {
   var phrase = bank[Math.floor(Math.random()*bank.length)];
 
   var textwrap = document.getElementById("textwrap");
 
-  ["r", "g", "b", "w"].map(
+  ["r", "g", "b", "w", "w-l", "w-r"].map(
     function (color) {
       var e = document.createElement("div");
       e.className = "tvtext " + color;
@@ -71,4 +76,18 @@ function getphrase(bank) {
     }
   );
 
+};
+
+function setFont(){
+  var sansserif = "-apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Segoe UI', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif";
+  var serif = "'Adobe Caslon Pro','Athelas', 'Goudy Old Style','Californian FB', Georgia, serif";
+  var font;
+  // Currently this is just system serif/sansserif fonts.
+  // Maybe look into loading different fonts? idk
+  if (Math.floor(Math.random()*2) == 1){
+    font = sansserif;
+  } else {
+    font = serif;
+  };
+  document.body.style.cssText = "font-family: " + font;
 };

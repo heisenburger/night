@@ -8,6 +8,7 @@ body {
   position: relative;
   background-color: black;
   color: white;
+  margin: 0;
 }
 
 .screen {
@@ -43,11 +44,23 @@ body {
 }
 
 .g { 
-  margin-top: $seperation;
+  margin-top: $seperation * 0.8;
 }
 
 .b { 
   margin-left: $seperation;
+}
+
+.w-l {
+  background-color: black;
+  margin-left: $seperation * 2;
+  animation: clip 2s infinite linear alternate-reverse;
+}
+
+.w-l {
+  background-color: black;
+  margin-left: (-$seperation * 2);
+  animation: clip 2s infinite linear alternate-reverse;
 }
 
 .crtlines {

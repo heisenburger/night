@@ -61,3 +61,20 @@
 
   // 100% { transform: skew(0,0)}
 }
+
+@keyframes clip {
+  $steps: 100;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      clip: rect(random(100)+vw, 100vw, random(100)+vh, 0);
+    }
+  }
+}
+
+@keyframes red {}
+
+@keyframes green {}
+
+@keyframes blue {}
+
+@keyframes white {}
