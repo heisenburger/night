@@ -63,7 +63,7 @@
 }
 
 @keyframes clip {
-  $steps: 100;
+  $steps: 50;
   @for $i from 0 through $steps {
     #{percentage($i*(1/$steps))} {
       clip: rect(random(100)+vw, 100vw, random(100)+vh, 0);
@@ -71,10 +71,20 @@
   }
 }
 
-@keyframes red {}
+@keyframes bump {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    $rand: random(8);
+    #{percentage($i*(1/$steps))} {
+      transform: translateY($rand+px);
+    }
+  }
+}
 
-@keyframes green {}
+@keyframes green {
 
-@keyframes blue {}
+}
 
-@keyframes white {}
+@keyframes blue {
+
+}

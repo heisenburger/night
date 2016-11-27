@@ -53,7 +53,7 @@ var bank = [
   "Did you come into contact with unknown magical forces",
   "being nice is cool",
   "The lesson repeats, as needed.",
-  "God exi ts",
+  "God exi&nbsp;&nbsp;ts",
   "Sleep with your limbs dangling off the edge of your bed to let the monsters know you're willing",
   "",
 ];
