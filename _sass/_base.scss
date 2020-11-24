@@ -1,5 +1,11 @@
 // base
 
+:root {
+  --screen-bg: rgb(24,10,18);
+  --screen-crt-glow: rgb(49,53,46);
+  --screen-crt-mask: rgb(37,32,32);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -22,6 +28,8 @@ body {
   border-radius: $text-size;
   filter: blur(1px);
   overflow: hidden;
+  background-color: var(--screen-bg);
+  background: radial-gradient(circle, var(--screen-crt-glow) 0%, var(--screen-bg) 100%);
 }
 
 .textwrap {
@@ -60,13 +68,13 @@ body {
 }
 
 .w-l {
-  background-color: black;
+  background-color: var(--screen-crt-mask);
   margin-left: (-$seperation * 2);
   animation: clip 2s infinite linear alternate-reverse,
 }
 
 .w-r {
-  background-color: black;
+  background-color: var(--screen-crt-mask);
   margin-left: ($seperation * 2);
   animation: clip 2s infinite linear alternate-reverse;
 }
