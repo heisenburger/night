@@ -1,4 +1,4 @@
-// phrasebank
+// phrase bank ↓
 
 var bank = [
   "Advice I gave to other people was really about me",
@@ -8,12 +8,11 @@ var bank = [
   "I’m always tired but never of you",
   "There is nothing behind you",
   "Assume all communications are tapped",
-  "black skin is not a crime",
+  "dark skin is not a crime",
   "warm comfort",
   "she waits, seething, blooming",
   "CRYING ROOM →",
   "Do not go gentle into that good night",
-  "Rage, rage against the dying of the light",
   "Please take your time. There is much to see.",
   "ugh",
   "Are you sure? Y/N",
@@ -41,7 +40,7 @@ var bank = [
   "all of their lies are true",
   "sometimes quiet is violent",
   "my parents warned me about the drugs in the streets but never the ones with hazel eyes and a heartbeat",
-  "Eyes I dare not meet in dreams / In death's dream kingdom // Sunlight on a broken column / There, is a tree swinging / And voices are / In the wind’s singing",
+  "Eyes I dare not meet in dreams / In death's dream kingdom / Sunlight on a broken column / There, is a tree swinging / And voices are / In the wind’s singing",
   "Once upon a time somewhere along the temporal continuum...",
   "in the world through which i travel i am endlessly creating myself",
   "Britney survived 2007. You can survive today.",
@@ -60,14 +59,24 @@ var bank = [
   "I am sick to death of this particular self. I want another.",
   "They asked, “do you love her to death?” I said, “speak of her over my grave and watch how she brings me back to life.”",
   "If I love you: is that a fact or a weapon?",
-  "Do the things you fear the most. Courage is an acquired taste; like caviar.",
+  "Do the things you fear the most. Courage is an acquired taste; like caviar",
   "How you love yourself is how you teach others to love you",
-  "This place could be beautiful, right? We could make this place beautiful."
+  "This place could be beautiful, right? We could make this place beautiful.",
+  "A monster is not such a terrible thing to be.",
+  "That’s the horror of speaking, of writing. There is nowhere to hide.",
+  "The Dark—felt beautiful—",
+  "come celebrate / with me that every day / something has tried to kill me / and has failed",
+  "This is not a love story, but love is in it. That is, love is just outside it, looking for a way to break in",
+  "I have taken the god into my mouth, chewed it up and tried not to choke on the bones",
+  "I am tired of waiting for the world to become good and kind"
 ];
+
+// Do stuff on load ↓
 
 document.body.onload = setFont();
 document.body.onload = getPhrase(bank);
 
+// Functions ↓
 
 function getPhrase(bank) {
   var phrase = bank[Math.floor(Math.random()*bank.length)];
@@ -98,3 +107,9 @@ function setFont(){
   };
   document.body.style.cssText = "font-family: " + font;
 };
+
+function swapPhrase(bank) {
+  var phrase = bank[Math.floor(Math.random()*bank.length)];
+  var elements = document.getElementByClassName("tvtext");
+  elements.forEach(element => element.textContent = phrase);
+}
