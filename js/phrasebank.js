@@ -65,7 +65,7 @@ var bank = [
   "A monster is not such a terrible thing to be.",
   "That’s the horror of speaking, of writing. There is nowhere to hide.",
   "The Dark—felt beautiful—",
-  "come celebrate / with me that every day / something has tried to kill me / and has failed",
+  "come celebrate with me that every day something has tried to kill me and has failed",
   "This is not a love story, but love is in it. That is, love is just outside it, looking for a way to break in",
   "I have taken the god into my mouth, chewed it up and tried not to choke on the bones",
   "I am tired of waiting for the world to become good and kind"
@@ -110,6 +110,9 @@ function setFont(){
 
 function swapPhrase(bank) {
   var phrase = bank[Math.floor(Math.random()*bank.length)];
-  var elements = document.getElementByClassName("tvtext");
-  elements.forEach(element => element.textContent = phrase);
+  var elements = document.getElementsByClassName("tvtext");
+  Array.prototype.forEach.call(elements, function(e) {
+      e.textContent = phrase;
+  });
 }
+
