@@ -51,7 +51,7 @@ var bank = [
   "Did you come into contact with unknown magical forces",
   "being nice is cool",
   "The lesson repeats, as needed.",
-  "God exi&nbsp;&nbsp;ts",
+  "God exi   ts",
   "Sleep with your limbs dangling off the edge of your bed to let the monsters know you’re willing",
   "The smell of night, inhaling stars",
   "Everything you eat is sunlight made physical. You are radiant and forever",
@@ -95,16 +95,17 @@ function getPhrase(bank) {
 };
 
 function setFont(){
-  var sansserif = "-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Roboto', 'Ubuntu', 'Segoe UI', 'Fira Sans', 'Droid Sans', sans-serif";
-  var serif = "'Adobe Caslon Pro','Athelas', 'Goudy Old Style','Californian FB', 'Georgia Pro' Georgia, serif";
-  var font;
-  // Currently this is just system serif/sansserif fonts.
-  // Maybe look into loading different fonts? idk
-  if (Math.floor(Math.random()*2) == 1){
-    font = sansserif;
-  } else {
-    font = serif;
-  };
+  var fonts = [
+    "-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'Roboto', 'Ubuntu', 'Segoe UI', 'Fira Sans', 'Droid Sans', Arial, sans-serif",
+    "'Athelas', 'Georgia Pro' Georgia, serif",
+    "'Hoefler Text', serif"
+    "'Garamond EB', Garamond, serif",
+    "'Goudy Old Style', 'Didot', serif",
+    "'Franklin Gothic', 'Franklin Gothic FS','SF Compact Display', sans-serif",
+    "'SF Compact Display', 'SF Pro Display', sans-serif",
+    "'Tahoma Regular', Tahoma, sans-serif",
+  ];
+  var font = fonts[Math.floor(Math.random()*fonts.length)];
   document.body.style.cssText = "font-family: " + font;
 };
 
@@ -114,5 +115,5 @@ function swapPhrase(bank) {
   Array.prototype.forEach.call(elements, function(e) {
       e.textContent = phrase;
   });
+  setFont();
 }
-
