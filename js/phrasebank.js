@@ -62,7 +62,7 @@ var bank = [
   "If I love you: is that a fact or a weapon?",
   "Do the things you fear the most. Courage is an acquired taste; like caviar.",
   "How you love yourself is how you teach others to love you",
-  "This place could be beautiful, right? You could make this place beautiful."
+  "This place could be beautiful, right? We could make this place beautiful."
 ];
 
 document.body.onload = setFont();
@@ -78,7 +78,7 @@ function getPhrase(bank) {
     function (color) {
       var e = document.createElement("div");
       e.className = "tvtext " + color;
-      e.innerHTML = phrase;
+      e.textContent = phrase;
       textwrap.appendChild(e);
     }
   );
@@ -86,8 +86,8 @@ function getPhrase(bank) {
 };
 
 function setFont(){
-  var sansserif = "-apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Segoe UI', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif";
-  var serif = "'Adobe Caslon Pro','Athelas', 'Goudy Old Style','Californian FB', Georgia, serif";
+  var sansserif = "-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Roboto', 'Ubuntu', 'Segoe UI', 'Fira Sans', 'Droid Sans', sans-serif";
+  var serif = "'Adobe Caslon Pro','Athelas', 'Goudy Old Style','Californian FB', 'Georgia Pro' Georgia, serif";
   var font;
   // Currently this is just system serif/sansserif fonts.
   // Maybe look into loading different fonts? idk
