@@ -24,7 +24,7 @@ body {
 
 .screen {
   margin: 5vmin;
-  width: 90vw;
+  width: calc(100vw - 10vmin);
   height: calc(100vh - 10vmin);
   border-radius: $text-size;
   filter: blur(1px);
