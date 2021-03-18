@@ -40,7 +40,7 @@ var bank = [
   "all of their lies are true",
   "sometimes quiet is violent",
   "my parents warned me about the drugs in the streets but never the ones with hazel eyes and a heartbeat",
-  "Eyes I dare not meet in dreams / In death's dream kingdom / Sunlight on a broken column / There, is a tree swinging / And voices are / In the wind’s singing",
+  "Eyes I dare not meet in dreams / In death's dream kingdom / Sunlight on a broken column",
   "Once upon a time somewhere along the temporal continuum...",
   "in the world through which i travel i am endlessly creating myself",
   "Britney survived 2007. You can survive today.",
@@ -57,7 +57,7 @@ var bank = [
   "Everything you eat is sunlight made physical. You are radiant and forever",
   "Oh the things we invent when we are scared and want to be rescued",
   "I am sick to death of this particular self. I want another.",
-  "They asked, “do you love her to death?” I said, “speak of her over my grave and watch how she brings me back to life.”",
+  "“Do you love her to death?” “speak of her over my grave and watch how she brings me back to life.”",
   "If I love you: is that a fact or a weapon?",
   "Do the things you fear the most. Courage is an acquired taste; like caviar",
   "How you love yourself is how you teach others to love you",
@@ -98,12 +98,12 @@ function setFont(){
   var fonts = [
     "-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'Roboto', 'Ubuntu', 'Segoe UI', 'Fira Sans', 'Droid Sans', Arial, sans-serif",
     "'Athelas', 'Georgia Pro' Georgia, serif",
-    "'Hoefler Text', serif"
+    "'Hoefler Text', serif",
     "'Garamond EB', Garamond, serif",
     "'Goudy Old Style', 'Didot', serif",
     "'Franklin Gothic', 'Franklin Gothic FS','SF Compact Display', sans-serif",
     "'SF Compact Display', 'SF Pro Display', sans-serif",
-    "'Tahoma Regular', Tahoma, sans-serif",
+    "'Tahoma Regular', Tahoma, sans-serif"
   ];
   var font = fonts[Math.floor(Math.random()*fonts.length)];
   document.body.style.cssText = "font-family: " + font;
